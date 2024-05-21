@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 8afa6434befa2683cc123395c6a23347a7431683
+  revision: cb466cb68a7dda105e64fd6cf550bf4a61bfa490
   branch: develop
   specs:
     decidim (0.29.0.dev)
@@ -458,10 +458,10 @@ GEM
       childprocess (~> 5.0)
     letter_opener (1.10.0)
       launchy (>= 2.2, < 4)
-    letter_opener_web (2.0.0)
-      actionmailer (>= 5.2)
-      letter_opener (~> 1.7)
-      railties (>= 5.2)
+    letter_opener_web (3.0.0)
+      actionmailer (>= 6.1)
+      letter_opener (~> 1.9)
+      railties (>= 6.1)
       rexml
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -741,10 +741,10 @@ GEM
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
-    spring (2.1.1)
-    spring-watcher-listen (2.0.1)
+    spring (4.2.1)
+    spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
-      spring (>= 1.2, < 3.0)
+      spring (>= 4)
     stringio (3.1.0)
     strscan (3.1.0)
     temple (0.10.3)
@@ -811,16 +811,16 @@ DEPENDENCIES
   decidim-dev!
   decidim-initiatives!
   decidim-templates!
-  letter_opener_web (~> 2.0)
-  listen (~> 3.1)
+  letter_opener_web
+  listen
   net-imap (~> 0.2.3)
   net-pop (~> 0.1.1)
   net-smtp (~> 0.3.1)
   puma (>= 6.3.1)
   sidekiq
-  spring (~> 2.0)
-  spring-watcher-listen (~> 2.0)
-  web-console (~> 4.2)
+  spring
+  spring-watcher-listen
+  web-console
   wicked_pdf (~> 2.1)
 
 RUBY VERSION
