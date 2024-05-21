@@ -5,7 +5,7 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 REPO = 'https://github.com/decidim/decidim.git'
-BRANCH = 'develop'
+BRANCH = 'staging-lot2'
 DECIDIM_VERSION = { git: REPO, branch: BRANCH }
 
 gem "decidim", DECIDIM_VERSION
