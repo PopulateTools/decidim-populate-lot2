@@ -15,5 +15,10 @@
   },
   "browserslist": [
     "extends @decidim/browserslist-config"
-  ]
+  ],
+  "engines": {
+    "node": "18.17.1",
+    "yarn": "1.22.19",
+    "npm": "7.21.1"
+  }
 }
