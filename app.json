@@ -13,7 +13,6 @@
   ],
   "scripts": {
     "dokku": {
-      "predeploy": "bundle exec rails decidim:webpacker:install",
       "postdeploy": "bundle exec rails db:migrate"
     }
   }
