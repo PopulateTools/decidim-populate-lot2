@@ -811,6 +811,7 @@ DEPENDENCIES
   decidim-dev!
   decidim-initiatives!
   decidim-templates!
+  faker
   letter_opener_web
   listen
   net-imap (~> 0.2.3)

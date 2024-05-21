@@ -16,6 +16,7 @@ gem "decidim-templates", DECIDIM_VERSION
 gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 6.3.1"
+gem "faker"
 
 gem "wicked_pdf", "~> 2.1"
 
