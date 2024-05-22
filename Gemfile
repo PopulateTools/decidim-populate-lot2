@@ -20,7 +20,7 @@ gem "faker"
 
 gem "wicked_pdf", "~> 2.1"
 
-gem "seven_zip_ruby", git: "https://github.com/andrewhamon/seven_zip_ruby.git", branch: "ah/install-so-in-gem-lib"
+gem "seven-zip", git: "https://github.com/fontist/seven_zip_ruby.git", branch: "master"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
