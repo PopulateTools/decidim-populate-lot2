@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: c6dedf6847c0c9445babd797a1494f9a7ad1355f
+  revision: 9823f5d27db668a1f4e7b39af5dca83fd9ffa0bf
   branch: staging-lot2
   specs:
     decidim (0.29.0.dev)
@@ -788,7 +788,7 @@ GEM
     web-push (3.0.1)
       jwt (~> 2.0)
       openssl (~> 3.0)
-    webmock (3.23.0)
+    webmock (3.23.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
