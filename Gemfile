@@ -13,6 +13,9 @@ gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
+# Performance
+gem "appsignal"
+
 gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 6.3.1"
