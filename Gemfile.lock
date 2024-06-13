@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: c3901702bf5459405ad91f475e7e3fd761383ac9
+  revision: c8d62a423484098184657b9c1f5b34571ffa3e72
   branch: staging-lot2
   specs:
     decidim (0.29.0.dev)
@@ -753,7 +753,7 @@ GEM
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
       spring (>= 4)
-    stringio (3.1.0)
+    stringio (3.1.1)
     strscan (3.1.0)
     temple (0.10.3)
     terminal-table (3.0.2)
