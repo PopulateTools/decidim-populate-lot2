@@ -10,11 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_21_095194) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_26_092443) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
+
+  create_table "action_mailbox_inbound_emails", force: :cascade do |t|
+    t.integer "status", default: 0, null: false
+    t.string "message_id", null: false
+    t.string "message_checksum", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["message_id", "message_checksum"], name: "index_action_mailbox_inbound_emails_uniqueness", unique: true
+  end
+
+  create_table "action_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -272,6 +291,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_21_095194) do
     t.string "attached_to_type", null: false
     t.integer "weight", default: 0, null: false
     t.integer "attachment_collection_id"
+    t.string "link"
     t.index ["attached_to_id", "attached_to_type"], name: "index_decidim_attachments_on_attached_to"
     t.index ["attachment_collection_id"], name: "index_decidim_attachments_on_attachment_collection_id"
   end
@@ -486,6 +506,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_21_095194) do
     t.bigint "decidim_user_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.datetime "published_at"
     t.index ["decidim_conference_id"], name: "index_decidim_conference_speakers_on_decidim_conference_id"
     t.index ["decidim_user_id"], name: "index_decidim_conference_speaker_on_decidim_user_id"
   end
@@ -1443,9 +1464,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_21_095194) do
     t.text "body", null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.bigint "parent_id"
     t.index ["created_at"], name: "index_decidim_proposals_proposal_notes_on_created_at"
     t.index ["decidim_author_id"], name: "decidim_proposals_proposal_note_author"
     t.index ["decidim_proposal_id"], name: "decidim_proposals_proposal_note_proposal"
+    t.index ["parent_id"], name: "decidim_proposals_proposal_notes_on_parent_id"
   end
 
   create_table "decidim_proposals_proposal_states", force: :cascade do |t|
