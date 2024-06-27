@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_26_092443) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_27_184654) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -957,6 +957,18 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_26_092443) do
     t.index ["decidim_author_id"], name: "index_decidim_initiatives_votes_on_decidim_author_id"
     t.index ["decidim_initiative_id"], name: "index_decidim_initiatives_votes_on_decidim_initiative_id"
     t.index ["hash_id"], name: "index_decidim_initiatives_votes_on_hash_id"
+  end
+
+  create_table "decidim_internal_evaluation_internal_evaluations", force: :cascade do |t|
+    t.bigint "decidim_proposal_id", null: false
+    t.bigint "decidim_proposal_state_id"
+    t.bigint "decidim_author_id", null: false
+    t.jsonb "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_author_id"], name: "index_decidim_internal_evaluations_on_author"
+    t.index ["decidim_proposal_id"], name: "index_decidim_internal_evaluations_on_proposal"
+    t.index ["decidim_proposal_state_id"], name: "index_decidim_internal_evaluations_on_proposal_state"
   end
 
   create_table "decidim_meetings_agenda_items", force: :cascade do |t|
