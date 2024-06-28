@@ -324,7 +324,7 @@ GEM
     cells-rails (0.1.5)
       actionpack (>= 5.0)
       cells (>= 4.1.6, < 5.0.0)
-    charlock_holmes (0.7.7)
+    charlock_holmes (0.7.8)
     childprocess (5.0.0)
     cmdparse (3.0.7)
     commonmarker (0.23.10)
