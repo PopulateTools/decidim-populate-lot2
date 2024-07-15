@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_27_184654) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_15_171730) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -484,6 +484,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_27_184654) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "participatory_space_type", null: false
+    t.boolean "visible", default: true
     t.index ["participatory_space_id", "participatory_space_type"], name: "index_decidim_components_on_decidim_participatory_space"
   end
 
@@ -963,7 +964,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_27_184654) do
     t.bigint "decidim_proposal_id", null: false
     t.bigint "decidim_proposal_state_id"
     t.bigint "decidim_author_id", null: false
-    t.jsonb "body"
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["decidim_author_id"], name: "index_decidim_internal_evaluations_on_author"
@@ -1879,6 +1880,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_27_184654) do
     t.datetime "officialized_at", precision: nil
     t.jsonb "officialized_as"
     t.datetime "admin_terms_accepted_at", precision: nil
+    t.boolean "email_on_assigned_proposals", default: true
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
