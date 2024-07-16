@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/AjuntamentdeBarcelona/decidim-internal-evaluation-module.git
-  revision: 70c2f91f6d8acb9fdc02f1942099170d09f9bbdb
+  revision: f55a171ab70889bb6b6b178bfb0d956c42df6f11
   branch: internal-evaluations-creation
   specs:
     decidim-internal_evaluation (0.28.1)
