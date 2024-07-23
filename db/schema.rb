@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_15_171730) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_23_083710) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -189,7 +189,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_15_171730) do
     t.jsonb "target"
     t.jsonb "participatory_scope"
     t.jsonb "participatory_structure"
-    t.boolean "show_statistics", default: false
+    t.boolean "show_statistics", default: true
     t.integer "decidim_scope_id"
     t.boolean "scopes_enabled", default: true, null: false
     t.boolean "private_space", default: false
@@ -1031,6 +1031,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_15_171730) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_invites_on_decidim_meeting_id"
     t.index ["decidim_user_id"], name: "index_decidim_meetings_invites_on_decidim_user_id"
+  end
+
+  create_table "decidim_meetings_meeting_links", force: :cascade do |t|
+    t.bigint "decidim_component_id", null: false
+    t.bigint "decidim_meeting_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_component_id"], name: "index_decidim_meetings_meeting_links_on_decidim_component_id"
+    t.index ["decidim_meeting_id"], name: "index_decidim_meetings_meeting_links_on_decidim_meeting_id"
   end
 
   create_table "decidim_meetings_meetings", id: :serial, force: :cascade do |t|
