@@ -1,16 +1,6 @@
 GIT
-  remote: https://github.com/AjuntamentdeBarcelona/decidim-internal-evaluation-module.git
-  revision: f55a171ab70889bb6b6b178bfb0d956c42df6f11
-  branch: internal-evaluations-creation
-  specs:
-    decidim-internal_evaluation (0.28.1)
-      decidim-core (>= 0.28.1)
-      decidim-proposals (>= 0.28.1)
-      deface (~> 1.9)
-
-GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 030df4819300964f99a714869956eb396778c04d
+  revision: 711946bc9b8496b2ea1d24481d5eb0ab37b6a6d5
   branch: staging-lot2
   specs:
     decidim (0.30.0.dev)
@@ -347,12 +337,6 @@ GEM
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
-    deface (1.9.0)
-      actionview (>= 5.2)
-      nokogiri (>= 1.6)
-      polyglot
-      railties (>= 5.2)
-      rainbow (>= 2.1.0)
     devise (4.9.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -585,7 +569,6 @@ GEM
     pg_search (2.3.6)
       activerecord (>= 5.2)
       activesupport (>= 5.2)
-    polyglot (0.3.5)
     premailer (1.23.0)
       addressable
       css_parser (>= 1.12.0)
@@ -845,7 +828,6 @@ DEPENDENCIES
   decidim-conferences!
   decidim-dev!
   decidim-initiatives!
-  decidim-internal_evaluation!
   decidim-templates!
   faker
   letter_opener_web
@@ -862,7 +844,7 @@ DEPENDENCIES
   wicked_pdf (~> 2.1)
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.3.4p94
 
 BUNDLED WITH
    2.4.1
