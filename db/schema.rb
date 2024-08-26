@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_23_083710) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_26_085406) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1773,6 +1773,30 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_23_083710) do
     t.index ["reset_password_token"], name: "index_decidim_system_admins_on_reset_password_token", unique: true
   end
 
+  create_table "decidim_taxonomies", force: :cascade do |t|
+    t.jsonb "name", default: {}, null: false
+    t.bigint "decidim_organization_id", null: false
+    t.bigint "parent_id"
+    t.integer "weight"
+    t.integer "children_count", default: 0, null: false
+    t.integer "taxonomizations_count", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id"], name: "index_decidim_taxonomies_on_decidim_organization_id"
+    t.index ["parent_id"], name: "index_decidim_taxonomies_on_parent_id"
+  end
+
+  create_table "decidim_taxonomizations", force: :cascade do |t|
+    t.bigint "taxonomy_id", null: false
+    t.string "taxonomizable_type", null: false
+    t.bigint "taxonomizable_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["taxonomizable_type", "taxonomizable_id"], name: "index_taxonomizations_on_taxonomizable"
+    t.index ["taxonomy_id", "taxonomizable_id", "taxonomizable_type"], name: "index_taxonomizations_on_id_tid_and_ttype", unique: true
+    t.index ["taxonomy_id"], name: "index_decidim_taxonomizations_on_taxonomy_id"
+  end
+
   create_table "decidim_templates_templates", force: :cascade do |t|
     t.integer "decidim_organization_id", null: false
     t.string "templatable_type"
@@ -1980,7 +2004,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_23_083710) do
     t.string "whodunnit"
     t.jsonb "object"
     t.datetime "created_at", precision: nil
-    t.text "object_changes"
+    t.jsonb "object_changes"
     t.index ["item_id", "item_type"], name: "index_versions_on_item_id_and_item_type"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
