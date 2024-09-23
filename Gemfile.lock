@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 734c04f70e6b1484570173069a36ff5460ccd5fb
+  revision: 42d61854b93b2872dd07ff4c8789737426ac057d
   branch: staging-lot2
   specs:
     decidim (0.30.0.dev)
@@ -382,8 +382,9 @@ GEM
       railties (>= 5.0.0)
     faker (3.3.1)
       i18n (>= 1.8.11, < 2)
-    faraday (2.11.0)
+    faraday (2.12.0)
       faraday-net_http (>= 2.0, < 3.4)
+      json
       logger
     faraday-net_http (3.3.0)
       net-http
@@ -440,8 +441,9 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    icalendar (2.10.2)
+    icalendar (2.10.3)
       ice_cube (~> 0.16)
+      ostruct
     ice_cube (0.17.0)
     image_processing (1.13.0)
       mini_magick (>= 4.9.5, < 5)
@@ -450,7 +452,7 @@ GEM
       rails (>= 3.2.0)
     io-console (0.7.2)
     json (2.7.2)
-    jwt (2.8.2)
+    jwt (2.9.0)
       base64
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -535,8 +537,8 @@ GEM
       rack-protection
     omniauth-facebook (5.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (1.1.3)
-      jwt (>= 2.0)
+    omniauth-google-oauth2 (1.2.0)
+      jwt (>= 2.9)
       oauth2 (~> 2.0)
       omniauth (~> 2.0)
       omniauth-oauth2 (~> 1.8)
@@ -555,6 +557,7 @@ GEM
       rack
     openssl (3.2.0)
     orm_adapter (0.5.0)
+    ostruct (0.6.0)
     paper_trail (15.2.0)
       activerecord (>= 6.1)
       request_store (~> 1.4)
@@ -701,10 +704,10 @@ GEM
     rubocop-faker (1.1.0)
       faker (>= 2.12.0)
       rubocop (>= 0.82.0)
-    rubocop-performance (1.21.1)
+    rubocop-performance (1.22.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rails (2.26.1)
+    rubocop-rails (2.26.2)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.52.0, < 2.0)
@@ -724,7 +727,7 @@ GEM
       nokogiri (>= 1.10.8)
       rubyzip (>= 1.3.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.24.0)
+    selenium-webdriver (4.25.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)

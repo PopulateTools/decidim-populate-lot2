@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_26_085406) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_23_082910) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -80,6 +80,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_26_085406) do
     t.float "weight", default: 1.0
     t.string "external_id"
     t.integer "comments_count", default: 0, null: false
+    t.text "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["decidim_accountability_status_id"], name: "decidim_accountability_results_on_status_id"
     t.index ["decidim_component_id"], name: "index_decidim_accountability_results_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_accountability_results_on_decidim_scope_id"
@@ -1782,6 +1785,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_26_085406) do
     t.integer "taxonomizations_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "filters_count", default: 0, null: false
+    t.integer "filter_items_count", default: 0, null: false
     t.index ["decidim_organization_id"], name: "index_decidim_taxonomies_on_decidim_organization_id"
     t.index ["parent_id"], name: "index_decidim_taxonomies_on_parent_id"
   end
@@ -1795,6 +1800,25 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_26_085406) do
     t.index ["taxonomizable_type", "taxonomizable_id"], name: "index_taxonomizations_on_taxonomizable"
     t.index ["taxonomy_id", "taxonomizable_id", "taxonomizable_type"], name: "index_taxonomizations_on_id_tid_and_ttype", unique: true
     t.index ["taxonomy_id"], name: "index_decidim_taxonomizations_on_taxonomy_id"
+  end
+
+  create_table "decidim_taxonomy_filter_items", force: :cascade do |t|
+    t.bigint "taxonomy_filter_id", null: false
+    t.bigint "taxonomy_item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["taxonomy_filter_id", "taxonomy_item_id"], name: "index_taxonomy_filter_items_on_filter_id_and_item_id", unique: true
+    t.index ["taxonomy_filter_id"], name: "index_decidim_taxonomy_filter_items_on_taxonomy_filter_id"
+    t.index ["taxonomy_item_id"], name: "index_decidim_taxonomy_filter_items_on_taxonomy_item_id"
+  end
+
+  create_table "decidim_taxonomy_filters", force: :cascade do |t|
+    t.bigint "root_taxonomy_id", null: false
+    t.integer "filter_items_count", default: 0, null: false
+    t.string "space_manifest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["root_taxonomy_id"], name: "index_decidim_taxonomy_filters_on_root_taxonomy_id"
   end
 
   create_table "decidim_templates_templates", force: :cascade do |t|
@@ -2047,6 +2071,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_26_085406) do
   add_foreign_key "decidim_scopes", "decidim_scope_types", column: "scope_type_id"
   add_foreign_key "decidim_scopes", "decidim_scopes", column: "parent_id"
   add_foreign_key "decidim_static_pages", "decidim_organizations"
+  add_foreign_key "decidim_taxonomy_filter_items", "decidim_taxonomies", column: "taxonomy_item_id"
+  add_foreign_key "decidim_taxonomy_filters", "decidim_taxonomies", column: "root_taxonomy_id"
   add_foreign_key "decidim_user_blocks", "decidim_users"
   add_foreign_key "decidim_user_blocks", "decidim_users", column: "blocking_user_id"
   add_foreign_key "decidim_user_moderations", "decidim_users"
