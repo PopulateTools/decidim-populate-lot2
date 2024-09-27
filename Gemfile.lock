@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 42d61854b93b2872dd07ff4c8789737426ac057d
+  revision: a54cf5381680dfd07bb228b41ab53ddaca9c4782
   branch: staging-lot2
   specs:
     decidim (0.30.0.dev)
@@ -93,7 +93,7 @@ GIT
       rack-attack (~> 6.0)
       rails (~> 7.0.8)
       rails-i18n (~> 7.0)
-      ransack (~> 3.2.1)
+      ransack (~> 4.2.0)
       redis (~> 4.1)
       request_store (~> 1.5.0)
       rubyXL (~> 3.4)
@@ -632,7 +632,7 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.2.1)
-    ransack (3.2.1)
+    ransack (4.2.1)
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
