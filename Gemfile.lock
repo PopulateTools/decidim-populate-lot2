@@ -200,6 +200,14 @@ GIT
   specs:
     seven-zip (1.6.2)
 
+PATH
+  remote: decidim-stats
+  specs:
+    decidim-stats (0.0.3)
+      decidim-comments (= 0.30.0.dev)
+      decidim-core (= 0.30.0.dev)
+      decidim-proposals (= 0.30.0.dev)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -858,6 +866,7 @@ DEPENDENCIES
   decidim-conferences!
   decidim-dev!
   decidim-initiatives!
+  decidim-stats!
   decidim-templates!
   faker
   letter_opener_web

@@ -13,6 +13,8 @@ gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
+gem "decidim-stats", path: "decidim-stats"
+
 # Performance
 gem "appsignal"
 
