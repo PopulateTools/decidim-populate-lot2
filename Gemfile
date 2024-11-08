@@ -14,6 +14,7 @@ gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
 gem "decidim-stats", path: "decidim-stats"
+gem "decidim-internal_evaluation", git: "https://github.com/AjuntamentdeBarcelona/decidim-internal-evaluation-module.git", branch: "release/0.29-stable"
 
 # Performance
 gem "appsignal"
