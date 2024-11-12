@@ -453,7 +453,7 @@ GEM
       gemoji (~> 3.0)
       graphql (~> 2.0)
       html-pipeline (~> 2.14, >= 2.14.3)
-    hashdiff (1.1.1)
+    hashdiff (1.1.2)
     hashie (5.0.0)
     hexapdf (0.32.2)
       cmdparse (~> 3.0, >= 3.0.3)
