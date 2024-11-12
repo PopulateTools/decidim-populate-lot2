@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: f332534b3866b575110b901065ef17406d65cdb5
+  revision: 2325c91e632a82a25c296f55210e62d7a5f5f02c
   branch: staging-lot2
   specs:
     decidim (0.30.0.dev)
@@ -64,7 +64,6 @@ GIT
       decidim-core (= 0.30.0.dev)
       decidim-meetings (= 0.30.0.dev)
       wicked_pdf (~> 2.7)
-      wkhtmltopdf-binary (= 0.12.6.6)
     decidim-core (0.30.0.dev)
       active_link_to (~> 1.0)
       acts_as_list (~> 1.0)
@@ -160,7 +159,6 @@ GIT
     decidim-forms (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
       wicked_pdf (~> 2.1)
-      wkhtmltopdf-binary (= 0.12.6.6)
     decidim-generators (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
     decidim-initiatives (0.30.0.dev)
@@ -170,7 +168,6 @@ GIT
       decidim-verifications (= 0.30.0.dev)
       hexapdf (~> 0.32.0)
       wicked_pdf (~> 2.1)
-      wkhtmltopdf-binary (= 0.12.6.6)
     decidim-meetings (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
       decidim-forms (= 0.30.0.dev)
@@ -854,7 +851,6 @@ GEM
       activesupport
     wisper (2.0.1)
     wisper-rspec (1.1.0)
-    wkhtmltopdf-binary (0.12.6.6)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.18)
