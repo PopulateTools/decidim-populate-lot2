@@ -116,6 +116,8 @@ GIT
     decidim-debates (0.30.0.dev)
       decidim-comments (= 0.30.0.dev)
       decidim-core (= 0.30.0.dev)
+    decidim-design (0.30.0.dev)
+      decidim-core (= 0.30.0.dev)
     decidim-dev (0.30.0.dev)
       bullet (~> 7.1.6)
       byebug (~> 11.0)
@@ -882,6 +884,7 @@ DEPENDENCIES
   byebug (~> 11.0)
   decidim!
   decidim-conferences!
+  decidim-design!
   decidim-dev!
   decidim-initiatives!
   decidim-internal_evaluation!
