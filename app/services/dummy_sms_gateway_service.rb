@@ -4,7 +4,6 @@ class DummySmsGatewayService
   attr_reader :mobile_phone_number, :code
 
   def initialize(mobile_phone_number, code, context = {})
-    byebug
     @mobile_phone_number = mobile_phone_number
     @code = code
   end
