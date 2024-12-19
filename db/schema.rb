@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_11_21_072429) do
+ActiveRecord::Schema[7.0].define(version: 2024_12_19_105017) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -703,6 +703,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_21_072429) do
     t.integer "follows_count", default: 0, null: false
     t.boolean "comments_enabled", default: true
     t.datetime "deleted_at"
+    t.string "comments_layout"
     t.index ["closed_at"], name: "index_decidim_debates_debates_on_closed_at"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_debates_debates_on_decidim_author"
     t.index ["decidim_component_id"], name: "index_decidim_debates_debates_on_decidim_component_id"
@@ -936,8 +937,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_21_072429) do
     t.integer "supports_required", null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.bigint "decidim_taxonomy_id"
     t.index ["decidim_initiatives_types_id"], name: "idx_scoped_initiative_type_type"
     t.index ["decidim_scopes_id"], name: "idx_scoped_initiative_type_scope"
+    t.index ["decidim_taxonomy_id"], name: "index_decidim_initiatives_type_scopes_on_decidim_taxonomy_id"
   end
 
   create_table "decidim_initiatives_types", force: :cascade do |t|
@@ -1215,10 +1218,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_21_072429) do
     t.string "related_object_type"
     t.bigint "related_object_id"
     t.bigint "decidim_category_id"
+    t.bigint "decidim_taxonomy_id"
     t.index ["day", "metric_type", "decidim_organization_id", "participatory_space_type", "participatory_space_id", "related_object_type", "related_object_id", "decidim_category_id"], name: "idx_metric_by_day_type_org_space_object_category", unique: true
     t.index ["day"], name: "index_decidim_metrics_on_day"
     t.index ["decidim_category_id"], name: "index_decidim_metrics_on_decidim_category_id"
     t.index ["decidim_organization_id"], name: "index_decidim_metrics_on_decidim_organization_id"
+    t.index ["decidim_taxonomy_id"], name: "index_decidim_metrics_on_decidim_taxonomy_id"
     t.index ["metric_type"], name: "index_decidim_metrics_on_metric_type"
     t.index ["participatory_space_type", "participatory_space_id"], name: "index_metric_on_participatory_space_id_and_type"
     t.index ["related_object_type", "related_object_id"], name: "index_metric_on_related_object_id_and_type"
