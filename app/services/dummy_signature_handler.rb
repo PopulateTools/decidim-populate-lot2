@@ -20,11 +20,18 @@
 #
 # See Decidim::AuthorizationHandler for more documentation.
 class DummySignatureHandler < Decidim::Initiatives::SignatureHandler
+  # i18n-tasks-use t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options.man")
+  # i18n-tasks-use t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options.non_binary")
+  # i18n-tasks-use t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options.woman")
+  AVAILABLE_GENDERS = %w(man woman non_binary).freeze
+
   # Define the attributes you need for this authorization handler. Attributes
   # are defined using Decidim::AttributeObject.
   #
   attribute :name_and_surname, String
+  attribute :document_type, String
   attribute :document_number, String
+  attribute :gender, String
   attribute :postal_code, String
   attribute :date_of_birth, Date
   attribute :scope_id, Integer
@@ -34,6 +41,32 @@ class DummySignatureHandler < Decidim::Initiatives::SignatureHandler
   # You can (and should) also define validations on each attribute:
   #
   validates :document_number, presence: true
+
+  validates :document_type,
+            inclusion: { in: :document_types },
+            presence: true
+
+  validates :gender,
+            inclusion: { in: :available_genders },
+            allow_blank: true
+
+  def document_types_for_select
+    document_types.map do |type|
+      [
+        I18n.t(type.downcase, scope: "decidim.verifications.id_documents"),
+        type
+      ]
+    end
+  end
+
+  def genders_for_select
+    available_genders.map do |gender|
+      [
+        I18n.t(gender, scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options", default: gender.humanize),
+        gender
+      ]
+    end
+  end
 
   # The only method that needs to be implemented for an authorization handler.
   # Here you can add your business logic to check if the authorization should
@@ -66,16 +99,22 @@ class DummySignatureHandler < Decidim::Initiatives::SignatureHandler
   # it is created, and available though authorization.metadata
   #
   def metadata
-    super.merge(name_and_surname:, document_number:, date_of_birth:, postal_code:)
+    super.merge(name_and_surname:, document_type:, document_number:, gender:, date_of_birth:, postal_code:)
   end
 
   def authorization_handler_params
     super.merge(scope_id:)
   end
 
-  class DummySignatureActionAuthorizer < Decidim::Initiatives::DefaultSignatureAuthorizer
-    def authorize
-      super
-    end
+  class DummySignatureActionAuthorizer < Decidim::Initiatives::DefaultSignatureAuthorizer; end
+
+  private
+
+  def document_types
+    Decidim::Verifications.document_types
+  end
+
+  def available_genders
+    AVAILABLE_GENDERS
   end
 end

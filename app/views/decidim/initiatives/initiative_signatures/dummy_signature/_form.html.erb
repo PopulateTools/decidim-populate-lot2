@@ -1,0 +1,59 @@
+<% content_for :title do %>
+  <%= t(".verify_your_identity") %>
+<% end %>
+
+<% content_for :help do %>
+  <div class="form__wrapper">
+    <p>
+      <%= t(
+            ".help_information_html",
+            initiative_title: translated_attribute(current_initiative.title),
+            initiative_author: decidim_sanitize(present(current_initiative.normalized_author).name)
+          ) %>
+    </p>
+    <p>
+      <%= t(".help_privacy") %>
+    </p>
+  </div>
+<% end %>
+
+<div class="form__wrapper">
+  <%= form.hidden_field :handler_name %>
+
+  <div class="row column">
+    <%= form.text_field :name_and_surname %>
+  </div>
+
+  <div class="row column">
+    <%= form.select(
+          :document_type,
+          handler.document_types_for_select,
+          prompt: true,
+          label: t("document_type_and_number.label", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields"),
+          help_text: t("document_type_and_number.help_text", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields")
+        ) %>
+    <%= form.text_field :document_number, label: false %>
+  </div>
+
+  <div class="row column">
+    <%= form.select(
+          :gender,
+          handler.genders_for_select,
+          prompt: true,
+          label: t("gender.label", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields"),
+          help_text: t("gender.help_text", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields")
+        ) %>
+  </div>
+
+  <div class="row column">
+    <%= form.text_field :postal_code %>
+  </div>
+
+  <div class="row column">
+    <%= form.date_field :date_of_birth %>
+  </div>
+
+  <div class="row column">
+    <%= scopes_select_field(form, :scope_id) %>
+  </div>
+</div>
