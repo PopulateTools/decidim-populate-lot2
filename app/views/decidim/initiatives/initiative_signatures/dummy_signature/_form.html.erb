@@ -21,18 +21,30 @@
   <%= form.hidden_field :handler_name %>
 
   <div class="row column">
-    <%= form.text_field :name_and_surname %>
+    <%= form.text_field(
+      :name_and_surname,
+      placeholder: t("decidim.initiatives.initiative_signatures.dummy_signature.form.choose_placeholder"),
+      label: t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.name_and_surname.label")
+    ) %>
   </div>
 
   <div class="row column">
-    <%= form.select(
-          :document_type,
-          handler.document_types_for_select,
-          prompt: true,
-          label: t("document_type_and_number.label", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields"),
-          help_text: t("document_type_and_number.help_text", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields")
-        ) %>
-    <%= form.text_field :document_number, label: false %>
+    <label for="dummy_signature_handler_document_type_and_number">
+      <%= t("document_type_and_number.label", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields") %>
+      <%= form.send(:required_indicator) %>
+    </label>
+    <span class="help-text">
+      <%= t("document_type_and_number.help_text", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields") %>
+    </span>
+    <div class="flex flex-row gap-2">
+      <%= form.select(
+        :document_type,
+        handler.document_types_for_select,
+        prompt: t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.document_type.prompt"),
+        label: false
+      ) %>
+    <%= form.text_field :document_number, label: false, placeholder: t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.document_number.placeholder") %>
+    </div>
   </div>
 
   <div class="row column">
@@ -45,15 +57,15 @@
         ) %>
   </div>
 
-  <div class="row column">
-    <%= form.text_field :postal_code %>
-  </div>
-
-  <div class="row column">
-    <%= form.date_field :date_of_birth %>
+  <div class="row column flex flex-row gap-2">
+    <%= form.date_select :date_of_birth, prompt: true %>
   </div>
 
   <div class="row column">
     <%= scopes_select_field(form, :scope_id) %>
+  </div>
+
+  <div class="row column">
+    <%= form.text_field :postal_code, placeholder: t("decidim.initiatives.initiative_signatures.dummy_signature.form.choose_placeholder") %>
   </div>
 </div>
