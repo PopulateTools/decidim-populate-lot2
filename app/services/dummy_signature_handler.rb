@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# An example authorization handler used so that users can be verified against
+# An example signature handler used so that users can be verified against
 # third party systems.
 #
 # You should probably rename this class and file to match your needs.
@@ -10,22 +10,22 @@
 #
 # Example:
 #
-#   A handler named Decidim::CensusHandler would look for its partial in:
-#   decidim/census/form
+#   A handler named Decidim::CensusSignatureHandler would look for its partial in:
+#   decidim/initiatives/initiative_signatures/census_signature/form
 #
-# When testing your authorization handler, add this line to be sure it has a
+# When testing your signature handler, add this line to be sure it has a
 # valid public api:
 #
-#   it_behaves_like "an authorization handler"
+#   it_behaves_like "a signature handler"
 #
-# See Decidim::AuthorizationHandler for more documentation.
+# See Decidim::Initiatives::SignatureHandler for more documentation.
 class DummySignatureHandler < Decidim::Initiatives::SignatureHandler
   # i18n-tasks-use t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options.man")
   # i18n-tasks-use t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options.non_binary")
   # i18n-tasks-use t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options.woman")
   AVAILABLE_GENDERS = %w(man woman non_binary).freeze
 
-  # Define the attributes you need for this authorization handler. Attributes
+  # Define the attributes you need for this signature handler. Attributes
   # are defined using Decidim::AttributeObject.
   #
   attribute :name_and_surname, String
@@ -36,6 +36,8 @@ class DummySignatureHandler < Decidim::Initiatives::SignatureHandler
   attribute :date_of_birth, Date
   attribute :scope_id, Integer
 
+  # signature_scope_id is used by the base handler to define the user signature
+  # scope
   alias signature_scope_id scope_id
 
   # You can (and should) also define validations on each attribute:
@@ -68,9 +70,10 @@ class DummySignatureHandler < Decidim::Initiatives::SignatureHandler
     end
   end
 
-  # The only method that needs to be implemented for an authorization handler.
-  # Here you can add your business logic to check if the authorization should
-  # be created or not, you should return a Boolean value.
+  # The only method that needs to be implemented for a signature handler.
+  # Here you can add your business logic to check if the signature should
+  # be created or not based on the provided data, you should return a
+  # Boolean value.
   #
   # Note that if you set some validations and overwrite this method, then the
   # validations will not run, so it is easier to remove this method and rewrite
@@ -92,16 +95,16 @@ class DummySignatureHandler < Decidim::Initiatives::SignatureHandler
     user.organization.scopes.find_by(id: scope_id) if scope_id
   end
 
-  # If you need to store any of the defined attributes in the authorization you
-  # can do it here.
+  # Any data that the developer would like to inject to the `metadata` field
+  # of a vote when it is created. Can be useful if some of the params the
+  # user sent with the signature form want to be persisted for future use.
   #
-  # You must return a Hash that will be serialized to the authorization when
-  # it is created, and available though authorization.metadata
-  #
+  # Returns a Hash.
   def metadata
     super.merge(name_and_surname:, document_type:, document_number:, gender:, date_of_birth:, postal_code:)
   end
 
+  # Params to be passed to the authorization handler if defined in the workflow.
   def authorization_handler_params
     super.merge(scope_id:)
   end
