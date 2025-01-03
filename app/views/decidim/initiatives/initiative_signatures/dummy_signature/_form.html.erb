@@ -58,7 +58,7 @@
   </div>
 
   <div class="row column flex flex-row gap-2">
-    <%= form.date_select :date_of_birth, prompt: true %>
+    <%= form.date_select :date_of_birth, prompt: true, start_year: Date.today.year - 100 %>
   </div>
 
   <div class="row column">
