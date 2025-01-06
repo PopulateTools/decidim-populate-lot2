@@ -478,7 +478,7 @@ GEM
       cmdparse (~> 3.0, >= 3.0.3)
       geom2d (~> 0.4, >= 0.4.1)
       openssl (>= 2.2.1)
-    highline (3.1.1)
+    highline (3.1.2)
       reline
     html-pipeline (2.14.3)
       activesupport (>= 2)
