@@ -7,6 +7,8 @@ en:
           form:
             choose_placeholder: Choose
             fields:
+              date_of_birth:
+                label: Date of birth
               document_number:
                 placeholder: Document number
               document_type:

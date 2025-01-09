@@ -36,14 +36,18 @@
     <span class="help-text">
       <%= t("document_type_and_number.help_text", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields") %>
     </span>
-    <div class="flex flex-row gap-2">
-      <%= form.select(
-        :document_type,
-        handler.document_types_for_select,
-        prompt: t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.document_type.prompt"),
-        label: false
-      ) %>
-    <%= form.text_field :document_number, label: false, placeholder: t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.document_number.placeholder") %>
+    <div class="flex flex-row gap-6">
+      <div class="w-full">
+        <%= form.select(
+          :document_type,
+          handler.document_types_for_select,
+          prompt: t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.document_type.prompt"),
+          label: false
+        ) %>
+      </div>
+      <div class="w-full">
+        <%= form.text_field :document_number, label: false, placeholder: t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.document_number.placeholder") %>
+      </div>
     </div>
   </div>
 
@@ -57,8 +61,14 @@
         ) %>
   </div>
 
-  <div class="row column flex flex-row gap-2">
-    <%= form.date_select :date_of_birth, prompt: true, start_year: Date.today.year - 100 %>
+  <div class="row column">
+    <label for="dummy_signature_handler_date_of_birth">
+      <%= t("date_of_birth.label", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields") %>
+
+      <div class="flex row-col space-x-3 w-full">
+        <%= form.date_select :date_of_birth, prompt: true, start_year: Date.today.year - 100, label: false %>
+      </div>
+    </label>
   </div>
 
   <div class="row column">
