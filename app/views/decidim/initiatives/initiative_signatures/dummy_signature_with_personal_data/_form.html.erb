@@ -1,29 +1,21 @@
 <% content_for :title do %>
-  <%= t(".verify_your_identity") %>
+  <%= t(
+        "decidim.verifications.authorizations.new.authorize_with",
+        authorizer: t("#{@form.signature_workflow_name}.name", scope: "decidim.initiatives.signatures.workflows")
+      ) %>
 <% end %>
 
 <% content_for :help do %>
   <div class="form__wrapper">
     <p>
-      <%= t(
-            ".help_information_html",
-            initiative_title: translated_attribute(current_initiative.title),
-            initiative_author: decidim_sanitize(present(current_initiative.normalized_author).name)
-          ) %>
-    </p>
-    <p>
-      <%= t(".help_privacy") %>
+      <%= t("#{@form.signature_workflow_name}.description", scope: "decidim.initiatives.signatures.workflows") %>
     </p>
   </div>
 <% end %>
 
 <div class="form__wrapper">
   <div class="row column">
-    <%= form.text_field(
-      :name_and_surname,
-      placeholder: t("decidim.initiatives.initiative_signatures.dummy_signature.form.choose_placeholder"),
-      label: t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.name_and_surname.label")
-    ) %>
+    <%= form.text_field :name_and_surname %>
   </div>
 
   <div class="row column">
@@ -53,9 +45,7 @@
     <%= form.select(
           :gender,
           handler.genders_for_select,
-          prompt: true,
-          label: t("gender.label", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields"),
-          help_text: t("gender.help_text", scope: "decidim.initiatives.initiative_signatures.dummy_signature.form.fields")
+          prompt: true
         ) %>
   </div>
 
@@ -74,6 +64,6 @@
   </div>
 
   <div class="row column">
-    <%= form.text_field :postal_code, placeholder: t("decidim.initiatives.initiative_signatures.dummy_signature.form.choose_placeholder") %>
+    <%= form.text_field :postal_code %>
   </div>
 </div>
