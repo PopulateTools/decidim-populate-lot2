@@ -36,7 +36,7 @@ group :development, :test do
   gem "decidim-dev", DECIDIM_VERSION
   gem "net-imap", "~> 0.2.3"
   gem "net-pop", "~> 0.1.1"
-  gem "net-smtp", "~> 0.3.1"
+  gem "net-smtp", "~> 0.5.0"
 end
 
 group :development do
