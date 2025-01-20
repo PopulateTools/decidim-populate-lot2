@@ -33,3 +33,8 @@ en:
               that will make the initiative signing legally binding.
             help_privacy: No information about you will be made public.
             verify_your_identity: Verify your identity
+      signatures:
+        workflows:
+          dummy_signature_with_personal_data_and_previous_authorization_handler:
+            description: Signature which only takes personal information from user and validates it against a previous existing authorization of the same type
+            name: Dummy Signature Handler With Personal Data Which Requires An Example Authorization Previously Created
