@@ -14,6 +14,7 @@
 #   decidim/initiatives/initiative_signatures/census_signature/form
 #
 # See Decidim::Initiatives::SignatureHandler for more documentation.
+#
 class DummySignatureHandler < Decidim::Initiatives::SignatureHandler
   # i18n-tasks-use t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options.man")
   # i18n-tasks-use t("decidim.initiatives.initiative_signatures.dummy_signature.form.fields.gender.options.non_binary")
