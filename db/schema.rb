@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_01_15_090700) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_24_110542) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -831,6 +831,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_15_090700) do
     t.integer "matrix_rows_count", default: 0, null: false
     t.integer "display_conditions_count", default: 0, null: false
     t.integer "display_conditions_for_other_questions_count", default: 0, null: false
+    t.datetime "survey_answers_published_at"
     t.index ["decidim_questionnaire_id"], name: "index_decidim_forms_questions_on_decidim_questionnaire_id"
     t.index ["position"], name: "index_decidim_forms_questions_on_position"
   end
@@ -1870,13 +1871,12 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_15_090700) do
   create_table "decidim_taxonomy_filters", force: :cascade do |t|
     t.bigint "root_taxonomy_id", null: false
     t.integer "filter_items_count", default: 0, null: false
-    t.string "space_manifest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "components_count", default: 0, null: false
     t.jsonb "name", default: {}
     t.jsonb "internal_name", default: {}
-    t.boolean "space_filter", default: false, null: false
+    t.string "participatory_space_manifests", default: [], null: false, array: true
     t.index ["root_taxonomy_id"], name: "index_decidim_taxonomy_filters_on_root_taxonomy_id"
   end
 
