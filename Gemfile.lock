@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 03efba564eae8f4fb3c980d81dfc1dfc0011f53e
+  revision: bd19579b5d0ecb05661c10f726818e5ecb6086cf
   branch: staging-lot2
   specs:
     decidim (0.30.0.dev)
@@ -148,6 +148,7 @@ GIT
       rubocop-capybara (~> 2.21)
       rubocop-factory_bot (~> 2.26)
       rubocop-faker (~> 1.1)
+      rubocop-graphql (~> 1.5)
       rubocop-performance (~> 1.21)
       rubocop-rails (~> 2.25)
       rubocop-rspec (~> 3.0)
@@ -773,6 +774,8 @@ GEM
     rubocop-faker (1.2.0)
       faker (>= 2.12.0)
       rubocop (>= 1.13.0)
+    rubocop-graphql (1.5.4)
+      rubocop (>= 1.50, < 2)
     rubocop-performance (1.23.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
