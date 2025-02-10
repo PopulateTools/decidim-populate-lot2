@@ -36,3 +36,6 @@ en:
               type
             name: Dummy Signature Handler With Personal Data Which Requires An Example
               Authorization Previously Created
+          ephemeral_dummy_signature_handler:
+            description: Ephemeral signature which takes personal information from user, validates authorization and checks SMS code
+            name: Ephemeral Dummy Signature Handler
