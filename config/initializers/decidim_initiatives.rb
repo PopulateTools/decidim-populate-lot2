@@ -15,8 +15,9 @@ Decidim::Initiatives::Signatures.register_workflow(:ephemeral_dummy_signature_ha
   workflow.authorization_handler_form = "DummyAuthorizationHandler"
   workflow.action_authorizer = "DummySignatureHandler::DummySignatureActionAuthorizer"
   workflow.promote_authorization_validation_errors = true
-  workflow.sms_verification = false
+  workflow.sms_verification = true
   workflow.sms_mobile_phone_validator = "DummySmsMobilePhoneValidator"
+  workflow.sms_mobile_phone_form = "DummySmsMobilePhoneForm"
 end
 
 Decidim::Initiatives::Signatures.register_workflow(:dummy_signature_with_sms_handler) do |workflow|
