@@ -26,6 +26,7 @@ gem "puma", ">= 6.3.1"
 gem "faker"
 
 gem "wicked_pdf", "~> 2.1"
+gem 'sidekiq'
 
 gem "seven-zip", git: "https://github.com/fontist/seven_zip_ruby.git", branch: "master"
 
@@ -45,8 +46,4 @@ group :development do
   gem "spring"
   gem "spring-watcher-listen"
   gem "web-console"
-end
-
-group :production do
-  gem 'sidekiq'
 end
