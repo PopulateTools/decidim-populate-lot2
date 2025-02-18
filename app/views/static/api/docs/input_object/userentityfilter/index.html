@@ -6,9 +6,9 @@ A typical query would look like:
 <h2>
 <a id="input-fields" class="anchor" href="#input-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input Fields</h2>
 <div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <span id="excludeids" class="field-name anchored">excludeIds (<code><a href="/api/docs/scalar/id">[ID!]</a></code>)</span>
   <div class="description-wrapper">
-   <p>Filters by type of entity (User or UserGroup)</p>
+   <p>Excludes users contained in given ids. Valid values are one or more IDs (passed as an array)</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -24,18 +24,22 @@ A typical query would look like:
   </div>
 </div>
 <div class="field-entry ">
+  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Filters by type of entity (User or UserGroup)</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="wildcard" class="field-name anchored">wildcard (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
    <p>Filters by nickname or name of the user entity. Searches (case-insensitive) any fragment of the provided string</p>
   </div>
-</div>
-<div class="field-entry ">
-  <span id="excludeids" class="field-name anchored">excludeIds (<code><a href="/api/docs/scalar/id">[ID!]</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Excludes users contained in given ids. Valid values are one or more IDs (passed as an array)</p>
-  </div>
 </div></div>
-<div id="sidebar"><ul class="categories">
+<div id="sidebar"><div id="search">
+  <img src="/api/docs/assets/images/search.svg">
+  <input autocomplete="off" placeholder="Search" />
+</div>
+<ul class="categories">
   <li>
     <ul class="menu-root">
       <li>

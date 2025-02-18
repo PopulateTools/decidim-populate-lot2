@@ -2,37 +2,12 @@
 <a id="initiativetype" class="anchor" href="#initiativetype" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>InitiativeType</h1>
 <p>An initiative type</p>
 <h2>
+<a id="implements" class="anchor" href="#implements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implements</h2>
+<ul>
+   <li><code><a href="/api/docs/interface/timestampsinterface">TimestampsInterface</a></code></li>
+</ul>
+<h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
-<div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The internal ID for this initiative type</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Initiative type name</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="description" class="field-name anchored">description (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>This is the initiative type description</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The date this initiative type was created</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The date this initiative type was updated</p>
-  </div>
-</div>
 <div class="field-entry ">
   <span id="bannerimage" class="field-name anchored">bannerImage (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
@@ -46,27 +21,33 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="description" class="field-name anchored">description (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>This is the initiative type description</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="extrafieldslegalinformation" class="field-name anchored">extraFieldsLegalInformation (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
    <p>Legal information about the collection of personal data</p>
   </div>
 </div>
 <div class="field-entry ">
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The internal ID for this initiative type</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="initiatives" class="field-name anchored">initiatives (<code><a href="/api/docs/object/initiative">[Initiative]!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The initiatives that have this type</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="minimumcommitteemembers" class="field-name anchored">minimumCommitteeMembers (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
   <div class="description-wrapper">
    <p>Minimum of committee members</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="validatesmscodeonvotes" class="field-name anchored">validateSmsCodeOnVotes (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Add SMS code validation step to signature process</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="undoonlinesignaturesenabled" class="field-name anchored">undoOnlineSignaturesEnabled (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Enable participants to undo their online signatures</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -82,12 +63,40 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="initiatives" class="field-name anchored">initiatives (<code><a href="/api/docs/object/initiative">[Initiative]!</a></code>)</span>
+  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>The initiatives that have this type</p>
+   <p>Initiative type name</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="undoonlinesignaturesenabled" class="field-name anchored">undoOnlineSignaturesEnabled (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Enable participants to undo their online signatures</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="validatesmscodeonvotes" class="field-name anchored">validateSmsCodeOnVotes (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Add SMS code validation step to signature process</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this object was created</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this object was updated</p>
   </div>
 </div></div>
-<div id="sidebar"><ul class="categories">
+<div id="sidebar"><div id="search">
+  <img src="/api/docs/assets/images/search.svg">
+  <input autocomplete="off" placeholder="Search" />
+</div>
+<ul class="categories">
   <li>
     <ul class="menu-root">
       <li>

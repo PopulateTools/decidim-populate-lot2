@@ -22,15 +22,15 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Filters by type of component</p>
-  </div>
-</div>
-<div class="field-entry ">
   <span id="name" class="field-name anchored">name (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
    <p>Filters by name of the component, additional locale parameter can be provided to specify in which to search</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Filters by type of component</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -45,7 +45,11 @@
    <p>Returns components with comments enabled globally (can still be deactivated in the current step if the component has steps)</p>
   </div>
 </div></div>
-<div id="sidebar"><ul class="categories">
+<div id="sidebar"><div id="search">
+  <img src="/api/docs/assets/images/search.svg">
+  <input autocomplete="off" placeholder="Search" />
+</div>
+<ul class="categories">
   <li>
     <ul class="menu-root">
       <li>

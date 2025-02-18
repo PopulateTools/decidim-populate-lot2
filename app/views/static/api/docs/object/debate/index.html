@@ -7,37 +7,14 @@
    <li><code><a href="/api/docs/interface/authorableinterface">AuthorableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/commentableinterface">CommentableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/taxonomizableinterface">TaxonomizableInterface</a></code></li>
+   <li><code><a href="/api/docs/interface/timestampsinterface">TimestampsInterface</a></code></li>
 </ul>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The internal ID for this debate</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The title for this debate</p>
-  </div>
-</div>
-<div class="field-entry ">
   <span id="description" class="field-name anchored">description (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
    <p>The description for this debate</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="instructions" class="field-name anchored">instructions (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The instructions for this debate</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="starttime" class="field-name anchored">startTime (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The start time for this debate</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -47,21 +24,15 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The internal ID for this debate</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="image" class="field-name anchored">image (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
    <p>The image of this debate</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>When this debate was created</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>When this debate was updated</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -71,9 +42,39 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="instructions" class="field-name anchored">instructions (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The instructions for this debate</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
    <p>The reference for this debate</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="starttime" class="field-name anchored">startTime (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The start time for this debate</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The title for this debate</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this object was created</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this object was updated</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -107,8 +108,27 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The number of comments in all levels this resource holds</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the commentable has comments</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the current user can comment</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="comments" class="field-name anchored">comments (<code><a href="/api/docs/object/comment">[Comment!]!</a></code>)</span>
   <div class="description-wrapper">
+   <p>The list of replies in this comment</p>
      <table class="arguments">
   <thead>
   <tr>
@@ -141,30 +161,16 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of comments in all levels this resource holds</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the commentable has comments</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the current user can comment</p>
-  </div>
-</div>
-<div class="field-entry ">
   <span id="taxonomies" class="field-name anchored">taxonomies (<code><a href="/api/docs/object/taxonomy">[Taxonomy!]</a></code>)</span>
   <div class="description-wrapper">
    <p>The object's taxonomies</p>
   </div>
 </div></div>
-<div id="sidebar"><ul class="categories">
+<div id="sidebar"><div id="search">
+  <img src="/api/docs/assets/images/search.svg">
+  <input autocomplete="off" placeholder="Search" />
+</div>
+<ul class="categories">
   <li>
     <ul class="menu-root">
       <li>

@@ -18,44 +18,9 @@
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The title for this title</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="body" class="field-name anchored">body (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The description for this body</p>
-  </div>
-</div>
-<div class="field-entry ">
   <span id="address" class="field-name anchored">address (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
    <p>The physical address (location) of this proposal</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="coordinates" class="field-name anchored">coordinates (<code><a href="/api/docs/object/coordinates">Coordinates</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Physical coordinates for this proposal</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>This proposal's unique reference</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="state" class="field-name anchored">state (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The answer status in which proposal is in</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -71,9 +36,39 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <span id="body" class="field-name anchored">body (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>The date and time this proposal was published</p>
+   <p>The description for this body</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="coordinates" class="field-name anchored">coordinates (<code><a href="/api/docs/object/coordinates">Coordinates</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Physical coordinates for this proposal</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="createdinmeeting" class="field-name anchored">createdInMeeting (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether this proposal comes from a meeting or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The id of the Proposal</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="meeting" class="field-name anchored">meeting (<code><a href="/api/docs/object/meeting">Meeting</a></code>)</span>
+  <div class="description-wrapper">
+   <p>If the proposal comes from a meeting, the related meeting</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="official" class="field-name anchored">official (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether this proposal is official or not</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -89,27 +84,33 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="official" class="field-name anchored">official (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether this proposal is official or not</p>
+   <p>The date and time this proposal was published</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="createdinmeeting" class="field-name anchored">createdInMeeting (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether this proposal comes from a meeting or not</p>
+   <p>This proposal's unique reference</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="meeting" class="field-name anchored">meeting (<code><a href="/api/docs/object/meeting">Meeting</a></code>)</span>
+  <span id="state" class="field-name anchored">state (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>If the proposal comes from a meeting, the related meeting</p>
+   <p>The answer status in which proposal is in</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="withdrawnat" class="field-name anchored">withdrawnAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>The date and time this proposal was withdrawn</p>
+   <p>The title for this title</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="votecount" class="field-name anchored">voteCount (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The total amount of votes the proposal has received</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -119,9 +120,9 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="votecount" class="field-name anchored">voteCount (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
+  <span id="withdrawnat" class="field-name anchored">withdrawnAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
   <div class="description-wrapper">
-   <p>The total amount of votes the proposal has received</p>
+   <p>The date and time this proposal was withdrawn</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -191,15 +192,15 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="author" class="field-name anchored">author (<code><a href="/api/docs/interface/author">Author</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The resource author. Note that this can be null on official proposals or meeting-proposals</p>
-  </div>
-</div>
-<div class="field-entry ">
   <span id="authors" class="field-name anchored">authors (<code><a href="/api/docs/interface/author">[Author]!</a></code>)</span>
   <div class="description-wrapper">
    <p>The resource co-authors. Include only users or groups of users</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="author" class="field-name anchored">author (<code><a href="/api/docs/interface/author">Author</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The resource author. Note that this can be null on official proposals or meeting-proposals</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -227,8 +228,27 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The number of comments in all levels this resource holds</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the commentable has comments</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the current user can comment</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="comments" class="field-name anchored">comments (<code><a href="/api/docs/object/comment">[Comment!]!</a></code>)</span>
   <div class="description-wrapper">
+   <p>The list of replies in this comment</p>
      <table class="arguments">
   <thead>
   <tr>
@@ -259,26 +279,12 @@
   </tbody>
 </table>
   </div>
-</div>
-<div class="field-entry ">
-  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of comments in all levels this resource holds</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the commentable has comments</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the current user can comment</p>
-  </div>
 </div></div>
-<div id="sidebar"><ul class="categories">
+<div id="sidebar"><div id="search">
+  <img src="/api/docs/assets/images/search.svg">
+  <input autocomplete="off" placeholder="Search" />
+</div>
+<ul class="categories">
   <li>
     <ul class="menu-root">
       <li>

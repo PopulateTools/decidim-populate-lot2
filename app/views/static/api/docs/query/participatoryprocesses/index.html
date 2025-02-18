@@ -18,44 +18,9 @@
 <h2>
 <a id="return-fields" class="anchor" href="#return-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Return fields</h2>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <span id="announcement" class="field-name anchored">announcement (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>The internal ID for this participatory process</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="slug" class="field-name anchored">slug (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="hashtag" class="field-name anchored">hashtag (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The hashtag for this participatory process</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this page was created</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this page was updated</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this page was published</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="subtitle" class="field-name anchored">subtitle (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The subtitle of this participatory process.</p>
+   <p>Highlighted announcement for this participatory process.</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -65,15 +30,9 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="shortdescription" class="field-name anchored">shortDescription (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <span id="developergroup" class="field-name anchored">developerGroup (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>The short description of this participatory process.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="startdate" class="field-name anchored">startDate (<code><a href="/api/docs/scalar/date">Date</a></code>)</span>
-  <div class="description-wrapper">
-   <p>This participatory process' start date.</p>
+   <p>The promoter group of this participatory process.</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -83,27 +42,21 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="hashtag" class="field-name anchored">hashtag (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The hashtag for this participatory process</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="heroimage" class="field-name anchored">heroImage (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
    <p>The hero image for this participatory process</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="promoted" class="field-name anchored">promoted (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
   <div class="description-wrapper">
-   <p>If this participatory process is promoted (therefore in the homepage)</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="developergroup" class="field-name anchored">developerGroup (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The promoter group of this participatory process.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="metascope" class="field-name anchored">metaScope (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The scope metadata of this participatory process.</p>
+   <p>The internal ID for this participatory process</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -113,9 +66,15 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="target" class="field-name anchored">target (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <span id="metascope" class="field-name anchored">metaScope (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>Who participates in this participatory process.</p>
+   <p>The scope metadata of this participatory process.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="participatoryprocessgroup" class="field-name anchored">participatoryProcessGroup (<code><a href="/api/docs/object/participatoryprocessgroup">ParticipatoryProcessGroup</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The participatory process group in which this process belong to</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -131,15 +90,15 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="scopesenabled" class="field-name anchored">scopesEnabled (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <span id="promoted" class="field-name anchored">promoted (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
   <div class="description-wrapper">
-   <p>If this participatory process has scopes enabled</p>
+   <p>If this participatory process is promoted (therefore in the homepage)</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="announcement" class="field-name anchored">announcement (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
   <div class="description-wrapper">
-   <p>Highlighted announcement for this participatory process.</p>
+   <p>The time this page was published</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -149,15 +108,45 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="scopesenabled" class="field-name anchored">scopesEnabled (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>If this participatory process has scopes enabled</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="shortdescription" class="field-name anchored">shortDescription (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The short description of this participatory process.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="slug" class="field-name anchored">slug (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The slug of the Participatory Process</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="startdate" class="field-name anchored">startDate (<code><a href="/api/docs/scalar/date">Date</a></code>)</span>
+  <div class="description-wrapper">
+   <p>This participatory process' start date.</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="steps" class="field-name anchored">steps (<code><a href="/api/docs/object/participatoryprocessstep">[ParticipatoryProcessStep]!</a></code>)</span>
   <div class="description-wrapper">
    <p>All the steps of this process.</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="participatoryprocessgroup" class="field-name anchored">participatoryProcessGroup (<code><a href="/api/docs/object/participatoryprocessgroup">ParticipatoryProcessGroup</a></code>)</span>
+  <span id="subtitle" class="field-name anchored">subtitle (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>The participatory process group in which this process belong to</p>
+   <p>The subtitle of this participatory process.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="target" class="field-name anchored">target (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Who participates in this participatory process.</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -193,6 +182,18 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this object was created</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this object was updated</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="taxonomies" class="field-name anchored">taxonomies (<code><a href="/api/docs/object/taxonomy">[Taxonomy!]</a></code>)</span>
   <div class="description-wrapper">
    <p>The object's taxonomies</p>
@@ -202,24 +203,6 @@
   <span id="linkedparticipatoryspaces" class="field-name anchored">linkedParticipatorySpaces (<code><a href="/api/docs/object/participatoryspacelink">[ParticipatorySpaceLink!]!</a></code>)</span>
   <div class="description-wrapper">
    <p>Lists all linked participatory spaces in a polymorphic way</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The graphql_name of this participatory space.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The participatory space class name. i.e. Decidim::ParticipatoryProcess</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="manifest" class="field-name anchored">manifest (<code><a href="/api/docs/object/participatoryspacemanifest">ParticipatorySpaceManifest!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The manifest information for the participatory space.</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -260,9 +243,32 @@
 <div class="field-entry ">
   <span id="stats" class="field-name anchored">stats (<code><a href="/api/docs/object/statistic">[Statistic]</a></code>)</span>
   <div class="description-wrapper">
+   <p>The statistics collection of this participatory space</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The graphql_name of this participatory space.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The participatory space class name. i.e. Decidim::ParticipatoryProcess</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="manifest" class="field-name anchored">manifest (<code><a href="/api/docs/object/participatoryspacemanifest">ParticipatorySpaceManifest!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The manifest information for the participatory space.</p>
   </div>
 </div></div>
-<div id="sidebar"><ul class="categories">
+<div id="sidebar"><div id="search">
+  <img src="/api/docs/assets/images/search.svg">
+  <input autocomplete="off" placeholder="Search" />
+</div>
+<ul class="categories">
   <li>
     <ul class="menu-root">
       <li>

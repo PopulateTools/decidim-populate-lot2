@@ -30,12 +30,6 @@
 <h2>
 <a id="return-fields" class="anchor" href="#return-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Return fields</h2>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The Commentable's unique ID</p>
-  </div>
-</div>
-<div class="field-entry ">
   <span id="addcomment" class="field-name anchored">addComment (<code><a href="/api/docs/object/comment">Comment</a></code>)</span>
   <div class="description-wrapper">
    <p>Add a new comment to a commentable</p>
@@ -49,15 +43,6 @@
   </thead>
   <tbody>
   <tr>
-  <td><code class="anchored">body</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String!</a></code>
-  </td>
-  <td>
-    <p>The comments's body</p>
-   </td>
-  </tr>
-  <tr>
   <td><code class="anchored">alignment</code></td>
   <td>
     <code><a href="/api/docs/scalar/int">Int</a></code>
@@ -65,6 +50,15 @@
   <td>
     <p>The comment's alignment. Can be 0 (neutral), 1 (in favor) or -1 (against)'</p>
        <p>The default value is <code>0</code>.</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">body</code></td>
+  <td>
+    <code><a href="/api/docs/scalar/string">String!</a></code>
+  </td>
+  <td>
+    <p>The comments's body</p>
    </td>
   </tr>
   <tr>
@@ -79,8 +73,18 @@
   </tbody>
 </table>
   </div>
+</div>
+<div class="field-entry ">
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The Commentable's unique ID</p>
+  </div>
 </div></div>
-<div id="sidebar"><ul class="categories">
+<div id="sidebar"><div id="search">
+  <img src="/api/docs/assets/images/search.svg">
+  <input autocomplete="off" placeholder="Search" />
+</div>
+<ul class="categories">
   <li>
     <ul class="menu-root">
       <li>

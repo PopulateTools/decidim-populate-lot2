@@ -16,39 +16,9 @@
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <span id="address" class="field-name anchored">address (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>ID of this meeting</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Reference for this meeting</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The title of this meeting.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="description" class="field-name anchored">description (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The description of this meeting.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="starttime" class="field-name anchored">startTime (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this meeting starts</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="endtime" class="field-name anchored">endTime (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this meeting ends</p>
+   <p>The physical address of this meeting (used for geolocation)</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -58,57 +28,9 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="closed" class="field-name anchored">closed (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="attendeecount" class="field-name anchored">attendeeCount (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether this meeting is closed or not.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="iswithdrawn" class="field-name anchored">isWithdrawn (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether this meeting is withdrawn or not.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="closingreport" class="field-name anchored">closingReport (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The closing report of this meeting.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="videourl" class="field-name anchored">videoUrl (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>URL for the video of the session, if any</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="audiourl" class="field-name anchored">audioUrl (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>URL for the audio of the session, if any</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="withdrawnat" class="field-name anchored">withdrawnAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The date and time this meeting was withdrawn</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="withdrawn" class="field-name anchored">withdrawn (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether this meeting has been withdrawn or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The date and time this minutes was created</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The date and time this minutes was updated</p>
+   <p>Amount of attendees to this meeting</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -118,9 +40,21 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="attendeecount" class="field-name anchored">attendeeCount (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
+  <span id="audiourl" class="field-name anchored">audioUrl (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>Amount of attendees to this meeting</p>
+   <p>URL for the audio of the session, if any</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="closed" class="field-name anchored">closed (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether this meeting is closed or not.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="closingreport" class="field-name anchored">closingReport (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The closing report of this meeting.</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -130,45 +64,39 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="privatemeeting" class="field-name anchored">privateMeeting (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="coordinates" class="field-name anchored">coordinates (<code><a href="/api/docs/object/coordinates">Coordinates</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether the meeting is private or not (it can only be true if transparent)</p>
+   <p>Physical coordinates for this meeting</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="transparent" class="field-name anchored">transparent (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="description" class="field-name anchored">description (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>For private meetings, information is public if transparent</p>
+   <p>The description of this meeting.</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="registrationsenabled" class="field-name anchored">registrationsEnabled (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="endtime" class="field-name anchored">endTime (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether the registrations are enabled or not</p>
+   <p>The time this meeting ends</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="registrationterms" class="field-name anchored">registrationTerms (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
   <div class="description-wrapper">
-   <p>The registration terms</p>
+   <p>ID of this meeting</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="remainingslots" class="field-name anchored">remainingSlots (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
+  <span id="iframeembedtype" class="field-name anchored">iframeEmbedType (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>Amount of slots available for this meeting</p>
+   <p>The type of displaying of the online meeting URL</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="registrationformenabled" class="field-name anchored">registrationFormEnabled (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="iswithdrawn" class="field-name anchored">isWithdrawn (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether the registrations have a form or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="registrationform" class="field-name anchored">registrationForm (<code><a href="/api/docs/object/questionnaire">Questionnaire</a></code>)</span>
-  <div class="description-wrapper">
-   <p>If registration requires to fill a form, this is the questionnaire</p>
+   <p>Whether this meeting is withdrawn or not.</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -184,15 +112,69 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="address" class="field-name anchored">address (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <span id="onlinemeetingurl" class="field-name anchored">onlineMeetingUrl (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
   <div class="description-wrapper">
-   <p>The physical address of this meeting (used for geolocation)</p>
+   <p>The URL of the meeting (when the type is online)</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="coordinates" class="field-name anchored">coordinates (<code><a href="/api/docs/object/coordinates">Coordinates</a></code>)</span>
+  <span id="privatemeeting" class="field-name anchored">privateMeeting (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
   <div class="description-wrapper">
-   <p>Physical coordinates for this meeting</p>
+   <p>Whether the meeting is private or not (it can only be true if transparent)</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Reference for this meeting</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="registrationform" class="field-name anchored">registrationForm (<code><a href="/api/docs/object/questionnaire">Questionnaire</a></code>)</span>
+  <div class="description-wrapper">
+   <p>If registration requires to fill a form, this is the questionnaire</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="registrationformenabled" class="field-name anchored">registrationFormEnabled (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether the registrations have a form or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="registrationterms" class="field-name anchored">registrationTerms (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The registration terms</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="registrationsenabled" class="field-name anchored">registrationsEnabled (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether the registrations are enabled or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="remainingslots" class="field-name anchored">remainingSlots (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Amount of slots available for this meeting</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="starttime" class="field-name anchored">startTime (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The time this meeting starts</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The title of this meeting.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="transparent" class="field-name anchored">transparent (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>For private meetings, information is public if transparent</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -202,15 +184,21 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="onlinemeetingurl" class="field-name anchored">onlineMeetingUrl (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <span id="videourl" class="field-name anchored">videoUrl (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The URL of the meeting (when the type is online)</p>
+   <p>URL for the video of the session, if any</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="iframeembedtype" class="field-name anchored">iframeEmbedType (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <span id="withdrawn" class="field-name anchored">withdrawn (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
   <div class="description-wrapper">
-   <p>The type of displaying of the online meeting URL</p>
+   <p>Whether this meeting has been withdrawn or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="withdrawnat" class="field-name anchored">withdrawnAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this meeting was withdrawn</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -223,6 +211,18 @@
   <span id="services" class="field-name anchored">services (<code><a href="/api/docs/object/meetingservice">[MeetingService]!</a></code>)</span>
   <div class="description-wrapper">
    <p>The object's services</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this object was created</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this object was updated</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -268,8 +268,27 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The number of comments in all levels this resource holds</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the commentable has comments</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the current user can comment</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="comments" class="field-name anchored">comments (<code><a href="/api/docs/object/comment">[Comment!]!</a></code>)</span>
   <div class="description-wrapper">
+   <p>The list of replies in this comment</p>
      <table class="arguments">
   <thead>
   <tr>
@@ -300,26 +319,12 @@
   </tbody>
 </table>
   </div>
-</div>
-<div class="field-entry ">
-  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of comments in all levels this resource holds</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the commentable has comments</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the current user can comment</p>
-  </div>
 </div></div>
-<div id="sidebar"><ul class="categories">
+<div id="sidebar"><div id="search">
+  <img src="/api/docs/assets/images/search.svg">
+  <input autocomplete="off" placeholder="Search" />
+</div>
+<ul class="categories">
   <li>
     <ul class="menu-root">
       <li>
