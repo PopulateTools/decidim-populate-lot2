@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 63feaea57277028439e22bf45e40491814f71274
+  revision: b7666c8471f0d84c59a6ad989af2de4c86d4570b
   branch: staging-lot2
   specs:
     decidim (0.31.0.dev)
@@ -182,7 +182,7 @@ GIT
     decidim-proposals (0.31.0.dev)
       decidim-comments (= 0.31.0.dev)
       decidim-core (= 0.31.0.dev)
-      doc2text (~> 0.4.7)
+      doc2text (~> 0.4.0, >= 0.4.8)
       redcarpet (~> 3.5, >= 3.5.1)
     decidim-sortitions (0.31.0.dev)
       decidim-admin (= 0.31.0.dev)
@@ -381,8 +381,8 @@ GEM
     diff-lcs (1.6.0)
     diffy (3.4.3)
     digest (3.2.0)
-    doc2text (0.4.7)
-      nokogiri (>= 1.13.2, < 1.17.0)
+    doc2text (0.4.8)
+      nokogiri (>= 1.18.2)
       rubyzip (~> 2.3.0)
     docile (1.4.1)
     doorkeeper (5.8.1)
@@ -559,6 +559,7 @@ GEM
     mime-types-data (3.2025.0220)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.8)
     minitest (5.25.4)
     msgpack (1.8.0)
     multi_xml (0.7.1)
@@ -576,17 +577,24 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.16.8-aarch64-linux)
+    nokogiri (1.18.3)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.16.8-arm-linux)
+    nokogiri (1.18.3-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.16.8-arm64-darwin)
+    nokogiri (1.18.3-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.16.8-x86-linux)
+    nokogiri (1.18.3-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.16.8-x86_64-darwin)
+    nokogiri (1.18.3-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.16.8-x86_64-linux)
+    nokogiri (1.18.3-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.3-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.3-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.3-x86_64-linux-musl)
       racc (~> 1.4)
     oauth (1.1.0)
       oauth-tty (~> 1.0, >= 1.0.1)
