@@ -2,7 +2,7 @@
 <a id="userentityfilter" class="anchor" href="#userentityfilter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UserEntityFilter</h1>
 <p>A type used for filtering any user or group
 A typical query would look like:
-<code>{ users(filter:{wildcard:"sandy", excludeIds:[2,10,11]}) { id ...on User { groups { name } } ...on UserGroup { members { name } } } }</code></p>
+<code>{ users(filter:{wildcard:"sandy", excludeIds:[2,10,11]}) { id } }</code></p>
 <h2>
 <a id="input-fields" class="anchor" href="#input-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input Fields</h2>
 <div class="field-entry ">
@@ -21,12 +21,6 @@ A typical query would look like:
   <span id="nickname" class="field-name anchored">nickname (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
    <p>Filters by nickname of the user entity. Searches (case-insensitive) any fragment of the provided string</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Filters by type of entity (User or UserGroup)</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -869,13 +863,6 @@ A typical query would look like:
       <li>
         <a href="/api/docs/object/user/" class="sidebar-link">
           User
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/usergroup/" class="sidebar-link">
-          UserGroup
         </a>
       </li>
       
