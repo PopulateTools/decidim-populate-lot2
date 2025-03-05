@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 4535de82420e59bcded439cc06059e6f1746f52c
+  revision: 68ae0a3224b93e0b3a6d1f22909a098b9b69ccb8
   branch: staging-lot2
   specs:
     decidim (0.31.0.dev)
@@ -445,22 +445,22 @@ GEM
     geom2d (0.4.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.29.3)
+    google-protobuf (4.30.0)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.29.3-aarch64-linux)
+    google-protobuf (4.30.0-aarch64-linux)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.29.3-arm64-darwin)
+    google-protobuf (4.30.0-arm64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.29.3-x86-linux)
+    google-protobuf (4.30.0-x86-linux)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.29.3-x86_64-darwin)
+    google-protobuf (4.30.0-x86_64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.29.3-x86_64-linux)
+    google-protobuf (4.30.0-x86_64-linux)
       bigdecimal
       rake (>= 13)
     graphql (2.4.11)
