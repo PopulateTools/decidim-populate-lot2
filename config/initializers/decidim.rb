@@ -278,7 +278,7 @@ Decidim.configure do |config|
   #   end
   # end
   #
-  # config.pdf_signature_service = "MyPDFSignatureService"
+  config.pdf_signature_service = "Decidim::PdfSignatureExample"
 
   # Etherpad configuration
   #
