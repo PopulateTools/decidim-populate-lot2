@@ -656,6 +656,7 @@ GEM
       actionmailer (>= 3)
       net-smtp
       premailer (~> 1.7, >= 1.7.9)
+    prism (1.4.0)
     public_suffix (6.0.1)
     puma (6.6.0)
       nio4r (~> 2.0)
@@ -774,8 +775,9 @@ GEM
       rubocop-ast (>= 1.36.2, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.42.0)
+    rubocop-ast (1.43.0)
       parser (>= 3.3.7.2)
+      prism (~> 1.4)
     rubocop-capybara (2.21.0)
       rubocop (~> 1.41)
     rubocop-factory_bot (2.26.1)
