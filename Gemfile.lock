@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: f42fc13b178eb5ede73faa34f6d33ad96c022667
+  revision: 827c31132baa4a25634709d6a32abfc7f2276472
   branch: staging-lot2
   specs:
     decidim (0.31.0.dev)
