@@ -482,7 +482,7 @@ GEM
       logger (~> 1.6)
       ostruct (~> 0.6)
       sass-embedded (~> 1.58)
-    hashdiff (1.2.0)
+    hashdiff (1.2.1)
     hashie (5.0.0)
     hexapdf (1.1.1)
       cmdparse (~> 3.0, >= 3.0.3)
